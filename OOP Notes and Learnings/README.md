@@ -87,7 +87,7 @@
 <p><img src="./images/instantiation2.JPG" width="800" style="border:1px solid black"></p>
 <blockquote><strong>Instantiation is a 2-step process:</strong>
     <ol>
-        <li>Creating the object/instance by extending the prototype</li>
+        <li>Creating the object/instance by extending the prototype through Object.create()</li>
         <li>Initialize its data</li>
     </ol>
 </blockquote>
@@ -112,6 +112,14 @@
 <p><strong>So whenever a function is defined, a constructor is actually being defined that's associated with a do-nothing class:</strong></p>
 <img src="./images/classical2.JPG" width="800" style="border:1px solid black">
 <p>If a function is meant to be a constructor its name should start with a capital letter (convention)</p>
+<p>To create an instance of an object in the classical model, the <code>new</code> keyword is used</p>
+<p>If <code>new</code> is used in a constructor function this will:</p>
+<ul>
+    <li>Create an empty object</li>
+    <li>Sets <code>this</code> to be that empty object</li>
+    <li>Implicitly returns <code>this</code> object</li>
+    <li>Adds a <code>__proto__</code> property to that returned object which links the prototype property of the constructor function to the new object</li>
+</ul>
 <p>Compared to each other, Prototypal (top) and Classical (bottom):</p>
 <img src="./images/classical3.JPG" width="800" style="border:1px solid black">
 <p>Classical model with subclasses:</p>
@@ -127,7 +135,3 @@
 <img src="./images/future-directions1.JPG" width="800" style="border:1px solid black">
 <p>Side-by-side comparison with classical model:</p>
 <img src="./images/future-directions2.JPG" width="800" style="border:1px solid black">
-
-
-
-
